@@ -1,7 +1,8 @@
-import 'dotenv';
 import express from 'express';
 import DevController from './app/Controllers/DevController';
 import SearchController from './app/Controllers/SearchController';
+
+require('dotenv/config');
 
 const routes = express.Router();
 
