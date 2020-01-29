@@ -1,6 +1,6 @@
-import express from 'express';
-import DevController from './app/Controllers/DevController';
-import SearchController from './app/Controllers/SearchController';
+const express = require('express');
+const DevController = require('./app/Controllers/DevController');
+const SearchController = require('./app/Controllers/SearchController');
 
 const routes = express.Router();
 
