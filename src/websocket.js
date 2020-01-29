@@ -1,8 +1,7 @@
+import 'dotenv';
 import socketio from 'socket.io';
 import stringAsArray from './app/utils/stringAsArray';
 import calculateDistance from './app/utils/CalculateDistance';
-
-require('dotenv/config');
 
 let io;
 const connections = [];
