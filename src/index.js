@@ -1,11 +1,10 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import http from 'http';
-import routes from './routes';
-import { setupWebsocket } from './websocket';
-
 require('dotenv/config');
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const http = require('http');
+const routes = require('./routes');
+const { setupWebsocket } = require('./websocket');
 
 const app = express();
 const server = http.Server(app);
