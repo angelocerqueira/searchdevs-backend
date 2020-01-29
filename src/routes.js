@@ -11,4 +11,4 @@ routes.delete('/devs/:id', DevController.destroy);
 
 routes.get('/search', SearchController.index);
 
-export default routes;
+module.exports = routes;
