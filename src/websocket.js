@@ -1,7 +1,7 @@
-import 'dotenv';
-import socketio from 'socket.io';
-import stringAsArray from './app/utils/stringAsArray';
-import calculateDistance from './app/utils/CalculateDistance';
+require('dotenv');
+const socketio = require('socket.io');
+const stringAsArray = require('./app/utils/stringAsArray');
+const calculateDistance = require('./app/utils/CalculateDistance');
 
 let io;
 const connections = [];

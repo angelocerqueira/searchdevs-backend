@@ -1,5 +1,5 @@
-import Dev from '../Models/Dev';
-import stringAsArray from '../utils/stringAsArray';
+const Dev = require('../Models/Dev');
+const stringAsArray = require('../utils/stringAsArray');
 
 class SearchController {
   async index(req, res) {
@@ -26,4 +26,4 @@ class SearchController {
   }
 }
 
-export default new SearchController();
+module.export = new SearchController();

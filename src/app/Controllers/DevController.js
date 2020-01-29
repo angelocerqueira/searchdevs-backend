@@ -1,7 +1,7 @@
-import axios from 'axios';
-import Dev from '../Models/Dev';
-import stringAsArray from '../utils/stringAsArray';
-import { findConnections, sendMessage } from '../../websocket';
+const axios = require('axios');
+const Dev = require('../Models/Dev');
+const stringAsArray = require('../utils/stringAsArray');
+const { findConnections, sendMessage } = require('../../websocket');
 
 class DevController {
   async index(req, res) {
@@ -80,4 +80,4 @@ class DevController {
   }
 }
 
-export default new DevController();
+module.exports = new DevController();
