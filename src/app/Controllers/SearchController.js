@@ -1,7 +1,7 @@
 const Dev = require('../Models/Dev');
 const stringAsArray = require('../utils/stringAsArray');
 
-class SearchController {
+module.exports = {
   async index(req, res) {
     const { latitude, longitude, techs } = req.query;
 
@@ -23,7 +23,5 @@ class SearchController {
     });
 
     return res.json(search);
-  }
-}
-
-module.export = new SearchController();
+  },
+};

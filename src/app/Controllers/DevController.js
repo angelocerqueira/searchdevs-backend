@@ -3,11 +3,11 @@ const Dev = require('../Models/Dev');
 const stringAsArray = require('../utils/stringAsArray');
 const { findConnections, sendMessage } = require('../../websocket');
 
-class DevController {
+module.exports = {
   async index(req, res) {
     const dev = await Dev.find();
     return res.json(dev);
-  }
+  },
 
   async create(req, res) {
     const { github_username, techs, latitude, longitude } = req.body;
@@ -47,7 +47,7 @@ class DevController {
       return res.json(dev);
     }
     return res.json(dev);
-  }
+  },
 
   async update(req, res) {
     const { id } = req.params;
@@ -69,7 +69,7 @@ class DevController {
     });
 
     return res.json({ msg: 'updated' });
-  }
+  },
 
   async destroy(req, res) {
     const { id } = req.params;
@@ -77,7 +77,5 @@ class DevController {
 
     await Dev.deleteOne(dev);
     return res.json({ msg: 'deleted' });
-  }
-}
-
-module.exports = new DevController();
+  },
+};
